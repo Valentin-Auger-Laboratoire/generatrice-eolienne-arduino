@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <title>Schéma de câblage 2026 : génératrice, mesure protégée, relais et LED</title>
+  <rect width="920" height="460" fill="#ffffff"/>
+  <text x="460" y="30" text-anchor="middle" font-size="19" font-weight="600" fill="#111">Câblage 2026 : la génératrice est mesurée, l'Arduino commande le relais</text>
+
+  <!-- génératrice -->
+  <circle cx="80" cy="150" r="38" fill="#fff6dc" stroke="#b08a1e" stroke-width="2"/>
+  <text x="80" y="146" text-anchor="middle" font-weight="600">G</text>
+  <text x="80" y="164" text-anchor="middle" font-size="12">~</text>
+  <text x="80" y="210" text-anchor="middle" font-size="12" fill="#555">génératrice</text>
+  <text x="80" y="226" text-anchor="middle" font-size="12" fill="#555">(hélice + aimants)</text>
+
+  <!-- pont de diodes -->
+  <rect x="160" y="120" width="90" height="60" rx="6" fill="#f0f0f0" stroke="#555"/>
+  <text x="205" y="146" text-anchor="middle" font-weight="600">pont de</text>
+  <text x="205" y="164" text-anchor="middle" font-weight="600">diodes</text>
+  <line x1="118" y1="150" x2="160" y2="150" stroke="#222" stroke-width="2"/>
+
+  <!-- condensateur -->
+  <line x1="250" y1="150" x2="330" y2="150" stroke="#222" stroke-width="2"/>
+  <line x1="290" y1="150" x2="290" y2="190" stroke="#222" stroke-width="2"/>
+  <line x1="275" y1="190" x2="305" y2="190" stroke="#222" stroke-width="3"/>
+  <line x1="275" y1="198" x2="305" y2="198" stroke="#222" stroke-width="3"/>
+  <line x1="290" y1="198" x2="290" y2="230" stroke="#222" stroke-width="2"/>
+  <text x="312" y="200" font-size="12" fill="#555">C 100 µF</text>
+
+  <!-- pont diviseur -->
+  <rect x="330" y="140" width="70" height="20" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="365" y="132" text-anchor="middle" font-size="12">33 kΩ</text>
+  <line x1="400" y1="150" x2="470" y2="150" stroke="#222" stroke-width="2"/>
+  <circle cx="440" cy="150" r="3.5" fill="#222"/>
+  <line x1="440" y1="150" x2="440" y2="175" stroke="#222" stroke-width="2"/>
+  <rect x="430" y="175" width="20" height="50" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="458" y="205" font-size="12">10 kΩ</text>
+  <line x1="440" y1="225" x2="440" y2="240" stroke="#222" stroke-width="2"/>
+  <line x1="400" y1="150" x2="400" y2="150"/>
+  <circle cx="420" cy="150" r="3.5" fill="#222"/>
+  <line x1="420" y1="150" x2="420" y2="255" stroke="#c8102e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="352" y="272" font-size="12" fill="#c8102e">Zener 5,1 V (protection)</text>
+  <!-- masse -->
+  <line x1="290" y1="240" x2="440" y2="240" stroke="#222" stroke-width="2"/>
+  <line x1="200" y1="180" x2="200" y2="240" stroke="#222" stroke-width="2"/>
+  <line x1="200" y1="240" x2="290" y2="240" stroke="#222" stroke-width="2"/>
+  <text x="300" y="258" font-size="12" fill="#555">GND</text>
+
+  <!-- Arduino -->
+  <rect x="470" y="110" width="200" height="200" rx="8" fill="#e9eef5" stroke="#3b5b85" stroke-width="2"/>
+  <text x="570" y="138" text-anchor="middle" font-weight="600" fill="#1f3550">Arduino Uno</text>
+  <text x="482" y="155" fill="#111">A0</text>
+  <text x="658" y="205" text-anchor="end" fill="#111">D8</text>
+  <text x="658" y="265" text-anchor="end" fill="#111">D13 (LED carte)</text>
+  <text x="570" y="296" text-anchor="middle" font-size="12" fill="#555">USB : CSV toutes les 500 ms</text>
+
+  <!-- relais -->
+  <line x1="670" y1="200" x2="720" y2="200" stroke="#222" stroke-width="2"/>
+  <rect x="720" y="160" width="160" height="90" rx="6" fill="#fde8e8" stroke="#c8102e"/>
+  <text x="800" y="184" text-anchor="middle" font-weight="600">Module relais</text>
+  <text x="800" y="204" text-anchor="middle" font-size="12" fill="#555">fermé &gt; 3,0 V, ouvert &lt; 2,5 V</text>
+  <text x="800" y="222" text-anchor="middle" font-size="12" fill="#555">2 s mini entre 2 changements</text>
+  <text x="800" y="240" text-anchor="middle" font-size="12" fill="#555">COM ← +5 V</text>
+
+  <!-- LED -->
+  <line x1="800" y1="250" x2="800" y2="300" stroke="#222" stroke-width="2"/>
+  <text x="808" y="280" font-size="12">NO</text>
+  <rect x="790" y="300" width="20" height="40" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="818" y="326" font-size="12">220 Ω</text>
+  <circle cx="800" cy="365" r="11" fill="#c8102e"/>
+  <text x="818" y="370" font-size="12">LED</text>
+  <line x1="800" y1="376" x2="800" y2="400" stroke="#222" stroke-width="2"/>
+  <text x="800" y="418" text-anchor="middle" font-size="12" fill="#555">GND</text>
+
+  <text x="460" y="445" text-anchor="middle" font-size="12" fill="#555">En 2024, la génératrice arrivait directement sur A0 (sans redressement, sans protection). Détail : docs/brochage.md</text>
+</svg>
