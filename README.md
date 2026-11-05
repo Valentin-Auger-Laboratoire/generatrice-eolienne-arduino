@@ -2,6 +2,9 @@
 
 🇫🇷 [Français](#français) · 🇬🇧 [English](#english)
 
+**▶ Démo web / Web demo :** https://valentin-auger-laboratoire.github.io/portfolio/demos/eolienne/
+Les montages 2024 et 2026 côte à côte sur le même vent : oscilloscope, relais, moniteurs série et puissance. / The 2024 and 2026 setups side by side on the same wind: oscilloscope, relays, serial monitors and power.
+
 ![Boîtier : relais et breadboard mis en position dans SolidWorks](images/02-relais-mise-en-position-1.png)
 
 ---
