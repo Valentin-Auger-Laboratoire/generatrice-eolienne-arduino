@@ -31,12 +31,12 @@
   <circle cx="440" cy="150" r="3.5" fill="#222"/>
   <line x1="440" y1="150" x2="440" y2="175" stroke="#222" stroke-width="2"/>
   <rect x="430" y="175" width="20" height="50" fill="#fff" stroke="#222" stroke-width="2"/>
-  <text x="458" y="205" font-size="12">10 kΩ</text>
+  <text x="414" y="205" font-size="12" text-anchor="end">10 kΩ</text>
   <line x1="440" y1="225" x2="440" y2="240" stroke="#222" stroke-width="2"/>
   <line x1="400" y1="150" x2="400" y2="150"/>
   <circle cx="420" cy="150" r="3.5" fill="#222"/>
   <line x1="420" y1="150" x2="420" y2="255" stroke="#c8102e" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="352" y="272" font-size="12" fill="#c8102e">Zener 5,1 V (protection)</text>
+  <text x="414" y="272" font-size="12" fill="#c8102e" text-anchor="end">Zener 5,1 V (protection)</text>
   <!-- masse -->
   <line x1="290" y1="240" x2="440" y2="240" stroke="#222" stroke-width="2"/>
   <line x1="200" y1="180" x2="200" y2="240" stroke="#222" stroke-width="2"/>
